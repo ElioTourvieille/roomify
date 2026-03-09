@@ -119,10 +119,10 @@ const Upload = ({ onComplete }: UploadProps) => {
                         </div>
                         <p>
                             {isSignedIn ? (
-                                "Click to upload or just drag and drop"
-                            ): ("Sign in or sign up with Puter to upload")}
+                                "Cliquez pour télécharger ou glissez-déposez simplement"
+                            ): ("Connectez-vous ou inscrivez-vous avec Puter pour télécharger")}
                         </p>
-                        <p className="help">Maximum file size 50 MB.</p>
+                        <p className="help">Taille maximale du fichier : 50 Mo.</p>
                     </div>
                 </div>
             ) : (
@@ -142,7 +142,7 @@ const Upload = ({ onComplete }: UploadProps) => {
                             <div className="bar" style={{ width: `${progress}%` }} />
 
                             <p className="status-text">
-                                {progress < 100 ? 'Analyzing Floor Plan...' : 'Redirecting...'}
+                                {progress < 100 ? 'Analyse du plan...' : 'Redirection...'}
                             </p>
                         </div>
                     </div>
