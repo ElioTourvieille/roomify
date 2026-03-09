@@ -7,7 +7,7 @@ import Upload from "components/Upload";
 import { useState } from "react";
 import { createProject } from "lib/puter.action";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_args: Route.MetaArgs) {
   return [
     { title: "Roomify" },
     {
