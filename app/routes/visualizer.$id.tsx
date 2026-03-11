@@ -4,7 +4,7 @@ import {generate3DView} from "../../lib/ai.action";
 import {Box, Download, RefreshCcw, Share2, X} from "lucide-react";
 import { Button } from "../../components/ui/Button";
 import {createProject, getProjectById} from "../../lib/puter.action";
-//import {ReactCompareSlider, ReactCompareSliderImage} from "react-compare-slider";
+import {ReactCompareSlider, ReactCompareSliderImage} from "react-compare-slider";
 
 const VisualizerId = () => {
     const { id } = useParams();
@@ -172,13 +172,13 @@ const VisualizerId = () => {
 
                 </div>
 
-                {/*<div className="panel compare">
+                <div className="panel compare">
                     <div className="panel-header">
                         <div className="panel-meta">
-                            <p>Comparison</p>
-                            <h3>Before and After</h3>
+                            <p>Comparaison</p>
+                            <h3>Avant et Après</h3>
                         </div>
-                        <div className="hint">Drag to compare</div>
+                        <div className="hint">Faites glisser pour comparer</div>
                     </div>
 
                     <div className="compare-stage">
@@ -187,21 +187,21 @@ const VisualizerId = () => {
                                 defaultValue={50}
                                 style={{ width: '100%', height: 'auto' }}
                                 itemOne={
-                                    <ReactCompareSliderImage src={project?.sourceImage} alt="before" className="compare-img" />
+                                    <ReactCompareSliderImage src={project?.sourceImage} alt="Avant" className="compare-img" />
                                 }
                                 itemTwo={
-                                    <ReactCompareSliderImage src={currentImage || project?.renderedImage} alt="after" className="compare-img" />
+                                    <ReactCompareSliderImage src={currentImage || project?.renderedImage || ''} alt="Après" className="compare-img" />
                                 }
                             />
                         ) : (
                             <div className="compare-fallback">
                                 {project?.sourceImage && (
-                                    <img src={project.sourceImage} alt="Before" className="compare-img" />
+                                    <img src={project.sourceImage} alt="Avant" className="compare-img" />
                                 )}
                             </div>
                         )}
                     </div>
-                </div>*/}
+                </div>
             </section>
         </div>
     )
